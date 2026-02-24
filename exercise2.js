@@ -11,16 +11,8 @@ tagInput.addEventListener('keydown', function(event) {
 
     const tag = document.createElement('div');
     tag.classList.add('tag');
-
-    tag.innerHTML = value;
-
-    const removeBtn = document.createElement('span');
-    removeBtn.classList.add('tag-remove');
-    removeBtn.textContent = '×';
-
-    tag.appendChild(removeBtn);
+    tag.innerHTML = `${value} <span class="tag-remove">&times;</span>`;
     tagContainer.appendChild(tag);
-
     tagInput.value = '';
 });
 
